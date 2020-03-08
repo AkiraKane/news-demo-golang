@@ -100,8 +100,6 @@ func searchHandler(w http.ResponseWriter, r *http.Request) {
 	err = tpl.Execute(w, search)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		http.Error(w, "Unexpected server error", http.StatusInternalServerError)
-		fmt.Println("wrong!")
 	}
 
 }
